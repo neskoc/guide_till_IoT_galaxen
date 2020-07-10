@@ -1,0 +1,36 @@
+{
+  "ssl": false,
+  "wifi":
+  {
+    "ssid": "ange ssid",
+    "password": "ange lösenord"
+  },
+  "device_id": "ange enhetens id",
+  "network_preferences": ["wifi", "sigfox", "lora_otaa"],
+  "cfg_msg": "Pybytes configuration read from /flash/pybytes_config.json",
+  "dump_ca": false,
+  "pybytes_autostart": true,
+  "server": "mqtt.pybytes.pycom.io",
+  "lora":
+  {
+    "otaa":
+    {
+      "app_key": "ange app key",
+      "app_device_eui": "ange device eui",
+      "app_eui": "ange app eui"
+    },
+    "abp":
+    {
+      "nwk_skey": "",
+      "dev_addr": "",
+      "app_skey": ""
+    }
+  },
+  "wlan_antenna": 0,
+  "ota_server":
+  {
+    "port": 443,
+    "domain": "software.pycom.io"
+  },
+  "username": "pycom användarnamn"
+}

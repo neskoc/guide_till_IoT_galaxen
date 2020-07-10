@@ -1,0 +1,17 @@
+{
+  "sjolab_mqtt":
+  {
+    "user_mqtt": "ange användaren",
+    "pass_mqtt": "ange lösenordet"
+  },
+  "wifi_home":
+  {
+    "ssid": "ange hem ssid",
+    "password": "ange lösenordet"
+  },
+  "wifi_work":
+  {
+    "ssid": "ange jobbets ssid",
+    "password": "ange lösenordet"
+  }
+}
