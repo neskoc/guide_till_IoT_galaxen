@@ -6,6 +6,8 @@ Projektet går ut på att testa och jämföra så många kommunikationsteknologi
 
 Därför är det svårt att prata om tid det skulle ta för "projektet"  för det är inget klassiskt projekt utan består av ett antal mer eller mindre löst kopplade delar men för att göra allt och gå igenom samtliga delar skulle det krävas kanske 5-6 timmar.
 
+Projektrapport with original markdown formating hittas på [hackmd](https://hackmd.io/@nc222fz/H1HbqfWJD)
+
 ---
 ## Innehållsförteckning
 
@@ -36,20 +38,17 @@ Till slut fick jag använda följande komponenter:
 | Jumper-kablar  | Ihopkoppling fipy och sensorn     | Hade sedan tidigare (3 skulle räcka för en enkell uppkoppling) |
 | Breadboard     | För att koppla ihop fypi/sensor       | Hade sedan tidigare (1 räcker) |
 
-
 ---
 
 ### Fipy: Pinnar med beteckningar
 
 ![Fipy](https://i.imgur.com/V0lDqJ0.png)
 
-
 ---
 
 ### Expansionsskort 3.0: Pinnar med beteckningar
 
 ![](https://i.imgur.com/h5dFgas.png)
-
 
 ---
 
@@ -68,10 +67,9 @@ sudo apt install nodejs
 ```
 Utvecklingsplattformen blev linux ([kubuntu](https://kubuntu.org) 20.04 LTS) som kopplades ihop med Expansion board 3.1 med hjälp av en microusb-kabel. Pycom erbjuder väldigt bra verktyg för linux och jag använder det på skrivbordet. Dessutom fungerar det utan att man behöver installera några nya drivrutiner. Samma usb-kabel används både som strömkälla och för datakommunikation.
 
-:::warning
+:::warning  
 :bulb: **OBS!** Man måste använda en usb-kabel som stödjer datakommunikation vilket oftast inte är fallet med usb-kablar som kommer med mobilladdare.  
-Dessutom skall man inte glöma att lägga den egna användaren i gruppen dialout:
-
+>Dessutom skall man inte glöma att lägga den egna användaren i gruppen dialout:
 ```bash
 sudo usermod -a -G dialout $USER
 ```
