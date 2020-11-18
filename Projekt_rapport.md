@@ -165,7 +165,8 @@ Koden nedan illustrerar hur fipy ansluts via WiFi till en accesspunkt och skicka
 Sensordata läses av och skickas var 30:e sekund.
 
 ##### Python källkod
-```python=
+
+```python
 from network import WLAN
 import machine
 from machine import Pin
@@ -280,7 +281,8 @@ _thread.start_new_thread(interval_send,[30])
 ### Serverapplikationer (lokalt och molntjänster)
 
 När man jobbar med IoT får man välja vad man vill köra lokalt och vad i molnet och vart. Det finns en uppsjö olika tjänster som oftast i begränsad omfattning är gratis men sedan kostar pengar.  
-Kör man lokalt har man full kontroll och med rätt teknologi kan vara billigare samt säkrare.  
+Kör man lokalt har man full kontroll och med rätt teknologi kan vara billigare samt säkrare.
+
 Jag har haft en raspberry pi på hyllan vilket gjorde att jag hade ett lätt val. Sedan har det visat sig vara ett klokt val också :smiley:  
 Det blev kostndaseffektivt samtidigt och för mig blev det lätt att komma igång trots att jag använde Docker + TIG-stack för första gången (mer info kommer lite längre ner).
 
@@ -295,17 +297,22 @@ Sedan kan man enkellt ansluta till en gratis broker (webhook) varifrån data kan
 #### [webhook.site](https://webhook.site/)
 
 Så fort man besöker webhook.site url får man en unik url som kan användas för att skicka data till med hjälp av http/post i json format.
+
 ![](https://i.imgur.com/2Lgx8Vy.png)
 
 Via pybytes integrations:
+
 ![](https://i.imgur.com/GCgXmHD.png)
 
 kan man sedan skapa en webhook dit:
+
 ![](https://i.imgur.com/b2z2HA5.png)
 
 ... och så här:
+
 ![](https://i.imgur.com/gsPPZfM.png)
-ser sensoradata ut efter att det har tryckts ut till den genererade länken.
+
+ser sensoradata ut efter att det har tryckts ut till den genererade länken.  
 Nackdelen är att sensordata inte lagras där utan måste kontinuerligt hämtas.
 
 #### [Node-RED](https://nodered.org/) ([IBM cloud](https://cloud.ibm.com/login))
@@ -335,7 +342,8 @@ Fredrik har lagt en [video på kursens youtubekanal](https://youtu.be/iUU6vhGuH8
    ![](https://i.imgur.com/icYHNx7.png)
 
 ---
-**Dashboard**
+
+__Dashboard__  
 ![](https://i.imgur.com/KODBC0q.png)
 
 #### RaspberryPi 3B
@@ -447,18 +455,27 @@ I Grafana kan man skapa automatiska larm utifrån fördefinerade kriterier vilka
 ![](https://i.imgur.com/fjzkdHH.png)
 
 1. Man behöver registrera sig på Discord först (gratis konto)
+
 2. Skapa en egen server med kommandot Add a Server (det gröna plustecknet i vänstra spalten på bilden ovan).
+
 3. Därefter välj edit-channel (kugghjul till höger om kanalens hashtag)
+
 4. Klicka på webhooks
    ![](https://i.imgur.com/uuW99ai.png)
+
 5. Välj "Create Webhook" och ge det ett namn samt kopiera url som skall användas i Grafana för att skcika alerter
+
 6. I Grafana gå till Alerting (ringklocka i i den vänstra spalten) 
    ![](https://i.imgur.com/J4PYWvw.png)
-8. Välj fliken "Notification channels" och välj "New Channel"
+
+7. Välj fliken "Notification channels" och välj "New Channel"
    ![](https://i.imgur.com/pqzABmE.png)
+
 8. Ange namnet, välj Type "Discord" och lägg i webhook länk skapad i Discord
+
 9. Gå till Dashboard och välj "Edit" för panel som skall generera alert samt gå till fliken "Alert" och ange önskade värden/konfiguration
    ![](https://i.imgur.com/ZdMbogw.png)
+
 10. Klicka på "Test rule" och kolla på Discord om det har fungerat. Till slut klicka på "Apply"/"Save" i den övre högra hörnan av panelen.
 
 
